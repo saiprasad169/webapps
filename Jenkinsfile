@@ -14,8 +14,7 @@ node {
 	 stage('Email Notification'){
 	    mail bcc: '', body: '''JENKINS JOB 
 	    HI 
-	    THANKS''', cc: '', from: '', replyTo: '', subject: 'TEST', to: 'saiprasad169@gmail.com'
-	    
-	 }
+	    THANKS''', cc: '', from: '', replyTo: '', subject: 'TEST', to: 'saiprasad169@gmail.com'    
+       }
      }
     }
