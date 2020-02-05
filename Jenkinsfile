@@ -12,9 +12,9 @@ node {
          sh 'docker-compose up --build -d'
        }
 	 stage('Email Notification'){
-	    emailext body: '''JENKINS MAIL SENDING TO GMAIL
-            Hi
-            Thanks''', recipientProviders: [culprits()], subject: 'TEST', to: 'saiprasad169@gmail.com'
+	    mail bcc: '', body: '''JENKINS JOB 
+	    HI 
+	    THANKS''', cc: '', from: '', replyTo: '', subject: 'TEST', to: 'saiprasad169@gmail.com'
 	    
 	 }
      }
