@@ -1,8 +1,7 @@
 node {
      def app
 	 stage('Email Notification'){
-	    emailext body: '''TAKEN
-	    HI 
-            THANKS''', subject: 'TESTING ', to: 'saiprasad169@gmail.com'   
+	    mail bcc: '', body: '''Jenkins Success
+            Thanks''', cc: '', from: '', replyTo: '', subject: 'TEST', to: 'saiprasad169@gmail.com' 
        }
      }
