@@ -12,7 +12,9 @@ node {
          sh 'docker-compose up --build -d'
        }
 	 stage('Email Notification'){
-	    mail bcc: '', body: 'Report for Jenkins Pipeline jobs ', cc: '', from: '', replyTo: '', subject: 'Jenkins Jobs', to: 'saiprasad169@gmail.com'
+	    emailext body: '''JENKINS MAIL SENDING TO GMAIL
+            Hi
+            Thanks''', recipientProviders: [culprits()], subject: 'TEST', to: 'saiprasad169@gmail.com'
 	    
 	 }
      }
