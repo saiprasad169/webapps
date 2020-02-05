@@ -1,9 +1,0 @@
-version: '2'
-services:
- web:
-   build:
-     context: .
-   image: test
-   ports:
-    - "90:80"
-   container_name: web-tester
